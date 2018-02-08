@@ -1,0 +1,7 @@
+<% @articulos.each do |articulo| %>    
+    <h1><%= articulo.title %></h1>
+    <p><%= articulo.body %></p>
+    <%= link_to  "Editar", edit_article_path(articulo) %>
+    <%= link_to  "Eliminar #{articulo.title}", articulo, method: :delete, data: {confirm: "¿Esta seguro de eliminar el articulo ?"}  %>
+<% end %>
+
