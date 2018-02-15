@@ -14,5 +14,50 @@
  *= require_self
  */
 
-@import "bootstrap-sprockets";
 @import "bootstrap";
+
+nav{
+    margin-bottom: 10px;
+}
+
+
+.nav-link {
+    color: white !important;
+}
+.list-group{
+    margin-bottom: 10px
+}
+
+.red-1{
+    background-color: red;
+}
+
+.space-a{
+    margin-top: 15px;
+}
+
+.space-title{
+    margin-top: 20px;
+    margin-bottom: 40px;  
+
+}
+
+.jumbotron{
+    background-color: rgb(218, 216, 99);
+}
+
+.space-label-right{
+   padding-right: 30px; 
+}
+
+.form-title{
+    font-style: bold;
+ }
+
+.col-form-label{
+    font-style: italic; 
+    font-size: 18px;
+ }
+
+ 
+

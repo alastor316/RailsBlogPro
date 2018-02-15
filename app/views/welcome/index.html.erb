@@ -1,19 +1,11 @@
 
-<nav class="navbar navbar-default navbar-fixed-bottom">
-    <div class="container">
-      ...
-    </div>
-  </nav>
-
-<%= link_to "Articles", articles_path %>
 <% @articulos.each do |articulo|  %>
-    <h1>
-        <%= link_to  articulo.title, articulo %>
-    </h1>
-    <p><%=articulo.body%></p>
-
-    <%= link_to  "Editar", edit_article_path(articulo) %>
-
+<div class="div jumbotron">
+    <h2 class="text-center">
+        <%= link_to  articulo.title, articulo, class:"title-text" %>
+    </h2>
+    <p class="text-center"><%=articulo.body%></p>
+</div>
 
 <%end%>
  
