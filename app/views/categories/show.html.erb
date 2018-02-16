@@ -5,6 +5,9 @@
 </style>
 
 <div class="jumbotron">
+  <% if !@category.user.nil? %>
+    <p> Creado por <strong><%= @category.user.email%></strong></p>
+  <%end%>
   <p>
     <strong>Name:</strong>
     <%= @category.name %>
