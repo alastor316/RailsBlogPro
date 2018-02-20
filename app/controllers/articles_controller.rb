@@ -1,6 +1,9 @@
 class ArticlesController < ApplicationController
     before_action :set_article, only: [:show, :edit, :update, :destroy]
-    before_action :authenticate_user! , only: [:edit, :update, :destroy, :new, :create]
+    #before_action :authenticate_user! , only: [:edit, :update, :destroy, :new, :create]
+    before_action :authenticate_editor! , only: [:create, :new, :update, :edit]
+    before_action :authenticate_admin! , only: [:destroy]
+
 
   def new
     @article = Article.new
@@ -13,7 +16,7 @@ class ArticlesController < ApplicationController
         format.html {redirect_to @article, notice: "Articulo #{@article.title}  creado."}
         format.json {render :show, status: :created, location: @article}
       else
-        format.html {redirect_to :new}
+        format.html { render :new }
         format.json {render json: @article.errors, status: :unprocessable_entity}
       end
     end
