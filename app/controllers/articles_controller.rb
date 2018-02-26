@@ -4,32 +4,51 @@ class ArticlesController < ApplicationController
     before_action :authenticate_editor! , only: [:create, :new, :update, :edit]
     before_action :authenticate_admin! , only: [:destroy]
 
-
-  def new
-    @article = Article.new
+  def search
+    if params.has_key?(:titulo) && params[:titulo].length > 0
+      @articles = Article.titulo(params[:titulo])
+    else
+      @articles = Article.all
+    end
   end
 
-  def create
-    @article = current_user.articles.new(article_params)
-    respond_to do |format|
-      if @article.save
-        format.html {redirect_to @article, notice: "Articulo #{@article.title}  creado."}
-        format.json {render :show, status: :created, location: @article}
-      else
-        format.html { render :new }
-        format.json {render json: @article.errors, status: :unprocessable_entity}
-      end
+  def index
+    @articulos = Article.ultimos
+    if user_signed_in? && current_user.is_editor? && !params.has_key?(:normal)
+      render :"admin_article"
     end
   end
 
   def show
-    
     #raise params.to_yaml
   end
 
-  def index
-    @articulos = Article.all
+def new
+  @article = Article.new
+    @categories = Category.all
   end
+
+  def create
+    if params[:categories].nil?
+        redirect_to new_article_path, alert:"Necesitas agregar minimo una categoria."
+    else
+      @article = current_user.articles.new(article_params)
+      @article.categoryMetodo = params[:categories]
+      #raise @article.to_yaml
+      respond_to do |format|
+        if @article.save
+          format.html {redirect_to @article, notice: "Articulo #{@article.title}  creado."}
+          format.json {render :show, status: :created, location: @article}
+        else
+          format.html { render :new }
+          format.json {render json: @article.errors, status: :unprocessable_entity}
+        end
+      end
+    end
+  end
+
+
+
 
   def edit
     
@@ -51,13 +70,13 @@ class ArticlesController < ApplicationController
     @article.destroy
     respond_to do |format|
       format.html {redirect_to @article, notice: "Articulo #{@article.title}  eliminado."}
-      fotmar.json {head :no_content}
+      format.json {head :no_content}
     end 
   end
 
   private
   def article_params
-    params.require(:article).permit(:title, :body)
+    params.require(:article).permit(:title, :body, :categories)
   end
 
   def set_article

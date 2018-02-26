@@ -24,6 +24,9 @@
                                 <%= form.label "Cuerpo:",  class:"offset-md-2 col-md-3 col-form-label  text-right space-label-right" %>
                                 <%= form.text_area :body,  class:"col-md-4 form-control", rows:"2" %>
                             </div>
+                            <% Category.all.each do |category| %>
+                                <%= check_box_tag "categories[]", category.id%> <%=category.name %><br>
+                            <%end%>
                             <div class="form-group row">
                                 <div class="container text-center">                
                                     <%= form.submit value="Crear", class:"btn btn-info col-md-3" %>

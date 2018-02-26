@@ -4,16 +4,12 @@
         <div class="col-sm-12 col-md-6 col-lg-4">
             <div class="jumbotron">
               <h1><%= link_to articulo.title, articulo %></h1>
-              <p><%= articulo.body %></p>
-              <% if user_signed_in? %>  
-                <% if current_user.is_editor?%>
-                  <%= link_to  "Editar", edit_article_path(articulo), class:"btn btn-warning" %>
-                <%end%>
-                <% if current_user.is_admin?%>
-                  <%= link_to  "Eliminar #{articulo.title}", articulo, method: 
-                  :delete, data: {confirm: "¿Esta seguro de eliminar el articulo ?"}, class:"btn btn-danger" %>        
-                <%end%>    
-              <%end%>     
+              <p><%=truncate(articulo.body, length: 200) %></p>
+              <%temporal = "Categorias: "%>
+              <% articulo.categories.each do |category| %>      
+                  <%temporal =   "#{temporal}  #{category.name}"%>
+              <%end%>      
+              <p> <%= temporal%> </p>   
             </div> 
         </div>
       <% end %>
@@ -21,4 +17,3 @@
 </div>           
 
     
- 

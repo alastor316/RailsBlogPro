@@ -16,6 +16,8 @@
 
 @import "bootstrap";
 
+
+
 nav{
     margin-bottom: 10px;
 }
@@ -42,7 +44,7 @@ nav{
 
 }
 
-.jumbotron{
+.jumbotronX{
     background-color: rgb(218, 216, 99);
 }
 
@@ -60,4 +62,46 @@ nav{
  }
 
  
+ .categories-show{
+     background: yellow;
+    padding-top: 10px;
+    padding-bottom: 10px;
 
+ }
+
+ .tabla-tbody{
+    background-color: rgb(153, 27, 8);
+ }
+
+ .tabla-tr{
+    color: #fff !important;
+ }
+
+ .salto{
+    margin-bottom: 20px
+ }
+
+ .search-title{
+     font-size: 48px !important;
+     color:#216892;
+ }
+
+
+ .search-body{
+    color: #3f6fc9;
+}
+
+ .search-title:hover{
+     font-size: 49px !important;
+     color: black;
+ }
+
+ .search-jumbotron{
+     padding-top: 13px !important;
+     padding-bottom: 13ox !important;
+     color: #CCFFFF !important;
+ }
+
+ .search-fondo:hover{
+    background-color: #66CCFF !important;
+}
