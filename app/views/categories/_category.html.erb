@@ -1,15 +1,19 @@
 <style type="text/css" media="screen">
-    <%= ".#{category.name}" %>{
+    <%= ".#{category.name.delete(' ')}" %>{
       background: <%= category.color %> !important;
     }
   </style>
  
- <div class="col-md-3">
-    <div class="jumbotron <%="#{category.name}"%> ">
-        <h2><%= category.name %></h2>
-        <p>
-            <%= "Contiene #{category.articles.count} articulo(s)" %>
-        </p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, earum quos ut modi ullam rerum maxime nesciunt autem qui molestiae voluptas quibusdam eum illo, architecto veritatis aliquid. Maxime, aperiam officia?</p>
+ <div class="col-md-3 ">
+    <div class="card">
+        <div class="card-body <%="#{category.name.delete(' ')}"%> ">
+            <h2 class="card-title"><%= category.name %></h2>
+            <p>
+                <%= "Contiene #{category.articles.count} articulo(s)" %>
+            </p>
+            <div class"card-text">
+                <%="Creado en #{category.created_at.strftime("%b, %d, %Y, %H:%M") }"%>
+            </div>
+        </div>
     </div>
  </div>

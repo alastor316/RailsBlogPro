@@ -1,33 +1,32 @@
-<div class="jumbotron">
-    <h1>Administrador</h1>
-    <p><%= link_to  "Normal", articles_path(normal:true),class:"btn btn-success" %></p>
-    <table class="table table-bordered">
-        <thead class="thead-dark"> 
-            <tr>
-                <th>Titulo</th>
-                <th>Cuerpo</th>
-                <th>Autor</th>
-                <th>Fecha de creacion</th>
-                <th>Editar</th>
-                <th>Ver</th>    
-                <th>Eliminar</th>  
-                         
-            </tr>
-        </thead>
-        <tbody class="tabla-tbody">
-            <%@articulos.each do |art| %>
-            <tr class="tabla-tr">
-                <td><%=art.title%></td>
-                <td><%=truncate art.body, length: 44%></td>
-                <td><%=art.user.email%></td>
-                <td><%=art.created_at.strftime("%b, %d, %Y, %H:%M") %></td>
-               
-                        <td> <%=link_to "Editar", edit_article_path(art),class:"btn btn-warning"%></td>
-                            <td> <%=link_to "ver", edit_article_path(art),class:"btn btn-info"%></td>
-                                <td><%=link_to "Eliminar", art, method: :delete, data:{confirm:"Desea eliminar?"},class:"btn btn-danger"%></td>
-          
-            </tr>
-            <%end%>
-        </tbody>
-    </table>
-</div>
+<div class="jumbotron table-responsive">
+        <h1>Administrador</h1>
+        <p><%= link_to  "Normal", articles_path(normal:true),class:"btn btn-success" %></p>
+        <div class="table">
+            <table class="table table-bordered">
+                <thead class="thead-dark"> 
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Titulo</th>
+                        <th scope="col">Autor</th>    
+                        <th scope="col">Fecha</th>
+                        <th class="text-center">Acciones</th>                  
+                    </tr>
+                </thead>
+                <tbody class="tabla-tbody">
+                    <%@articulos.each do |art| %>
+                    <tr scope="row" class="tabla-tr text-center">
+                        <td><%= art.id %></td>
+                        <td><%= art.title %></td>
+                        <td><%= art.user.email %></td>
+                        <td><%= art.created_at.strftime("%B, %d, %Y, %H:%M")%></td>
+                        <td>
+                            <%=link_to "ver", edit_article_path(art),class:"btn btn-info"%>
+                            <%=link_to "Editar", art, class:"btn btn-warning"%>
+                            <%=link_to "Eliminar", art, method: :delete, data:{confirm:"Desea eliminar?"},class:"btn btn-danger"%>
+                        </td>    
+                    </tr>
+                    <%end%>
+                </tbody>
+            </table>
+        </div>
+    </div>

@@ -1,6 +1,8 @@
 <div class="jumbotron"> 
     <h1><%=@article.title%></h1>
-    <p><%=@article.body%></p>
+    <div class="article-html">
+      <%=@article.body.html_safe%>
+    </div>
     <% if !@article.user.nil? %>
         <p><%=@article.user.email%></p>
     <%end%>
