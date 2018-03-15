@@ -1,7 +1,7 @@
 class Article < ApplicationRecord
     include PermissionsConcern
     has_many :has_categories
-    has_many :categories, through: :has_categories
+    has_many :categories, through: :has_categories, dependent: :nullify
     after_create :save_categoryMetodo
     belongs_to :user
     validates :title, uniqueness: true
@@ -13,6 +13,15 @@ class Article < ApplicationRecord
     scope :titulo, -> (title) { where("lower (title) LIKE ?", "%#{title}%") } 
   #  scope :titulo, -> (find_titulo) {where title: find_titulo}
 
+    has_attached_file :cover,
+     styles: {
+         medium: { geometry: '800x600', format: :png, convert_options: '' },
+         thumb: { geometry: '320x240>', format: :png },
+         mini: "400x200>",
+         big: "500x500>"},
+         default_url: "/images/:style/missing.png"
+    validates_attachment_content_type :cover, content_type: /\Aimage\/.*\Z/
+    
     def categoryMetodo=(value)
         @categories = value
         #raise value.to_yaml

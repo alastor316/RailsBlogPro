@@ -16,10 +16,15 @@
                                 </ul>
                                 </div>
                             <% end %>
-                            <div class="form-group row">
-                                <%= form.label "Titulo:",  class:"offset-md-2 col-md-3 col-form-label text-right space-label-right" %>
-                                <%= form.text_field :title,  class:"col-md-4 form-control" %>
-                            </div>    
+                                <div class="form-group row">
+                                    <%= form.label "Titulo:",  class:"offset-md-2 col-md-3 col-form-label text-right space-label-right" %>
+                                    <%= form.text_field :title,  class:"col-md-4 form-control" %>
+                                </div>
+                                
+                                <div class="form-group row">
+                                    <%= form.label "Banner:",  class:"offset-md-2 col-md-3 col-form-label text-right space-label-right" %>
+                                    <%= form.file_field :cover,  class:"col-md-4 form-control" %>
+                                </div>    
                             <div class="">
                                 <%= form.trix_editor :body, class:"form-control" %>
                             </div>

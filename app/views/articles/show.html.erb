@@ -1,10 +1,14 @@
-<div class="jumbotron"> 
-    <h1><%=@article.title%></h1>
-    <div class="article-html">
-      <%=@article.body.html_safe%>
-    </div>
-    <% if !@article.user.nil? %>
+<div class="jumbotron" style="padding-top: 15px "> 
+    <h1 class="text-center"><%=@article.title%></h1>
+    <div class="article-html div-centrar">
+        <%= image_tag @article.cover(:medium), class:"mx-auto d-block" %>
+        <p>   
+        <%=@article.body.html_safe%>
+        </p> 
+        <% if !@article.user.nil? %>
         <p><%=@article.user.email%></p>
+    </div>
+
     <%end%>
 
     <%= link_to  "Editar", edit_article_path(@article), class:"btn btn-warning" %>
