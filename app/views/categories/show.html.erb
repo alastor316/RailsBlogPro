@@ -29,9 +29,9 @@
           <p><%=truncate(article.body, length: 200) %></p>
           <%= link_to  "Ver mas", article, class:"btn btn-info" %>
           <% if user_signed_in? && current_user.is_editor? %>
-            <%= link_to 'Edit', edit_category_path(@category) %> |
+            <%= link_to 'Edit', edit_category_path(@category), class:"btn btn-warning", style:"width: 70px" %> 
           <%end%>  
-          <%= link_to 'Back', categories_path %>
+          <%= link_to 'Back', categories_path, class:"btn btn-success", style:"width: 70px" %>
         </div>
       </div>
   <%end%>

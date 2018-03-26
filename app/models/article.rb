@@ -1,6 +1,6 @@
 class Article < ApplicationRecord
     include PermissionsConcern
-    has_many :has_categories
+    has_many :has_categories, dependent: :destroy
     has_many :categories, through: :has_categories, dependent: :nullify
     after_create :save_categoryMetodo
     belongs_to :user
@@ -15,8 +15,9 @@ class Article < ApplicationRecord
 
     has_attached_file :cover,
      styles: {
-         medium: { geometry: '800x600', format: :png, convert_options: '' },
-         thumb: { geometry: '320x240>', format: :png },
+         thumb: { geometry: '320x240>', format: :png, convert_options: " -background '#A9BCF5' -gravity center -extent 320x240" },
+       #  thum: { geometry: '320x240#', format: :png, convert_options: " -background white -gravity center -extent 300x300" },
+         medium: { geometry: '800x600', format: :png, convert_options: " -background white -gravity center -extent 800x600" },
          mini: "400x200>",
          big: "500x500>"},
          default_url: "/images/:style/missing.png"

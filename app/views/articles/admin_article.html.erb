@@ -20,8 +20,8 @@
                         <td><%= art.user.email %></td>
                         <td><%= art.created_at.strftime("%B, %d, %Y, %H:%M")%></td>
                         <td>
-                            <%=link_to "ver", edit_article_path(art),class:"btn btn-info"%>
-                            <%=link_to "Editar", art, class:"btn btn-warning"%>
+                            <%=link_to "ver", art, class:"btn btn-info"%>
+                            <%=link_to "Editar", edit_article_path(art),class:"btn btn-warning"%>
                             <%=link_to "Eliminar", art, method: :delete, data:{confirm:"Desea eliminar?"},class:"btn btn-danger"%>
                         </td>    
                     </tr>

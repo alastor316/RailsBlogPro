@@ -1,9 +1,16 @@
 <div class="jumbotron" style="padding-top: 15px "> 
     <h1 class="text-center"><%=@article.title%></h1>
-    <div class="article-html div-centrar">
-        <%= image_tag @article.cover(:medium), class:"mx-auto d-block" %>
-        <p>   
-        <%=@article.body.html_safe%>
+    <div class="article-html ">
+        <div class="col-md-12 text-center ">
+           
+        <%= image_tag @article.cover(:thumb), class:"img-fluid" %>
+               
+        </div>
+        <p> 
+       
+        <div class="col-md-12 text-justify ">    
+            <%=@article.body.html_safe%>
+        </div>
         </p> 
         <% if !@article.user.nil? %>
         <p><%=@article.user.email%></p>
@@ -14,3 +21,4 @@
     <%= link_to  "Editar", edit_article_path(@article), class:"btn btn-warning" %>
     <%= link_to  "Atras", root_path, class:"btn btn-info" %>
 </div>
+
