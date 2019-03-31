@@ -11,9 +11,12 @@ gem 'bootstrap-material-design'
 
 gem 'jquery-rails'
 # Usuarios
-gem 'devise', '~> 4.3.0'
+gem 'devise'
 # Imagenes
 gem "paperclip", "~> 5.2.1"
+
+#Paginador
+gem 'will_paginate', '~> 3.1.0'
 # Editor trix
 gem 'trix'
 # Acortar texto y siga siendo html

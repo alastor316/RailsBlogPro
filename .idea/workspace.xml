@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="231d4b6c-172c-4630-a0cb-3fce54e5a481" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/assets/javascripts/comments.coffee" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/comments.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/paginate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/comments_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/helpers/comments_helper.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/comment.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/comments/_comment.json.jbuilder" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/comments/_form.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/comments/edit.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/comments/index.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/comments/index.json.jbuilder" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/comments/new.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/comments/show.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/comments/show.json.jbuilder" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/migrate/20180326005606_add_column_cover_to_category.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/migrate/20180403020746_create_comments.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/big/missing.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/medium/missing.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/mini/missing.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/original/missing.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/thumb/missing.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/system/articles/covers/000/000/048/big/railsCurso.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/system/articles/covers/000/000/048/medium/railsCurso.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/system/articles/covers/000/000/048/mini/railsCurso.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/system/articles/covers/000/000/048/original/railsCurso.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/system/articles/covers/000/000/048/thumb/railsCurso.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/system/articles/covers/000/000/049/big/alice.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/system/articles/covers/000/000/049/medium/alice.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/system/articles/covers/000/000/049/mini/alice.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/system/articles/covers/000/000/049/original/alice.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/system/articles/covers/000/000/049/thumb/alice.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/system/categories/covercats/000/000/007/big/web.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/system/categories/covercats/000/000/007/medium/web.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/system/categories/covercats/000/000/007/mini/web.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/system/categories/covercats/000/000/007/original/web.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/system/categories/covercats/000/000/007/thumb/web.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/system/categories/covercats/000/000/008/big/tecno.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/system/categories/covercats/000/000/008/medium/tecno.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/system/categories/covercats/000/000/008/mini/tecno.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/system/categories/covercats/000/000/008/original/tecno.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/system/categories/covercats/000/000/008/thumb/tecno.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/controllers/comments_controller_test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/fixtures/comments.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/models/comment_test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/system/comments_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/articles_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/articles_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/categories_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/categories_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/article.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/article.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/category.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/category.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/has_category.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/has_category.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/articles/_article.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/articles/_article.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/articles/admin_article.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/articles/admin_article.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/articles/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/articles/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/articles/search.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/articles/search.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/articles/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/articles/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/categories/_category.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/categories/_category.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/categories/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/categories/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/categories/admin_category.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/categories/admin_category.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/categories/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/categories/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/initializers/devise.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/devise.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/locales/devise.en.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/locales/devise.en.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/system/articles/covers/000/000/039/big/pato.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/articles/covers/000/000/039/big/pato.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/system/articles/covers/000/000/039/medium/pato.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/articles/covers/000/000/039/medium/pato.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/system/articles/covers/000/000/039/mini/pato.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/articles/covers/000/000/039/mini/pato.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/system/articles/covers/000/000/039/original/pato.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/articles/covers/000/000/039/original/pato.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/system/articles/covers/000/000/039/thum/pato.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/articles/covers/000/000/039/thum/pato.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/system/articles/covers/000/000/039/thumb/pato.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/articles/covers/000/000/039/thumb/pato.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/system/articles/covers/000/000/040/big/auto.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/articles/covers/000/000/040/big/auto.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/system/articles/covers/000/000/040/medium/auto.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/articles/covers/000/000/040/medium/auto.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/system/articles/covers/000/000/040/mini/auto.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/articles/covers/000/000/040/mini/auto.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/system/articles/covers/000/000/040/original/auto.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/articles/covers/000/000/040/original/auto.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/system/articles/covers/000/000/040/thum/auto.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/articles/covers/000/000/040/thum/auto.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/system/articles/covers/000/000/040/thumb/auto.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/articles/covers/000/000/040/thumb/auto.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/system/articles/covers/000/000/040/thumb/auto.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/articles/covers/000/000/040/thumb/auto.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/system/articles/covers/000/000/041/big/javascript.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/articles/covers/000/000/041/big/javascript.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/system/articles/covers/000/000/041/medium/javascript.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/articles/covers/000/000/041/medium/javascript.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/system/articles/covers/000/000/041/medium/javascript.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/articles/covers/000/000/041/medium/javascript.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/system/articles/covers/000/000/041/mini/javascript.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/articles/covers/000/000/041/mini/javascript.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/system/articles/covers/000/000/041/original/javascript.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/articles/covers/000/000/041/original/javascript.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/system/articles/covers/000/000/041/thum/javascript.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/articles/covers/000/000/041/thum/javascript.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/system/articles/covers/000/000/041/thumb/javascript.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/articles/covers/000/000/041/thumb/javascript.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/system/articles/covers/000/000/041/thumb/javascript.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/articles/covers/000/000/041/thumb/javascript.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/system/articles/covers/000/000/044/medium/railsCurso.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/articles/covers/000/000/044/medium/railsCurso.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/system/articles/covers/000/000/044/thumb/railsCurso.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/articles/covers/000/000/044/thumb/railsCurso.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/system/articles/covers/000/000/045/big/railsCurso.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/articles/covers/000/000/045/big/railsCurso.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/system/articles/covers/000/000/045/medium/railsCurso.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/articles/covers/000/000/045/medium/railsCurso.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/system/articles/covers/000/000/045/mini/railsCurso.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/articles/covers/000/000/045/mini/railsCurso.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/system/articles/covers/000/000/045/original/railsCurso.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/articles/covers/000/000/045/original/railsCurso.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/system/articles/covers/000/000/045/thum/railsCurso.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/articles/covers/000/000/045/thum/railsCurso.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/system/articles/covers/000/000/045/thumb/railsCurso.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/articles/covers/000/000/045/thumb/railsCurso.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/system/articles/covers/000/000/045/thumb/railsCurso.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/articles/covers/000/000/045/thumb/railsCurso.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/system/articles/covers/000/000/046/big/Yukihiro_Matsumoto.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/articles/covers/000/000/046/big/Yukihiro_Matsumoto.JPG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/system/articles/covers/000/000/046/medium/Yukihiro_Matsumoto.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/articles/covers/000/000/046/medium/Yukihiro_Matsumoto.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/system/articles/covers/000/000/046/mini/Yukihiro_Matsumoto.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/articles/covers/000/000/046/mini/Yukihiro_Matsumoto.JPG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/system/articles/covers/000/000/046/original/Yukihiro_Matsumoto.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/articles/covers/000/000/046/original/Yukihiro_Matsumoto.JPG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/system/articles/covers/000/000/046/thum/Yukihiro_Matsumoto.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/articles/covers/000/000/046/thum/Yukihiro_Matsumoto.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/system/articles/covers/000/000/046/thumb/WhatsApp_Image_2018-02-04_at_12.15.26_PM.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/articles/covers/000/000/046/thumb/WhatsApp_Image_2018-02-04_at_12.15.26_PM.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/system/articles/covers/000/000/046/thumb/Yukihiro_Matsumoto.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/articles/covers/000/000/046/thumb/Yukihiro_Matsumoto.JPG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/system/articles/covers/000/000/046/thumb/Yukihiro_Matsumoto.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/articles/covers/000/000/046/thumb/Yukihiro_Matsumoto.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/system/articles/covers/000/000/046/thumb/Yukihiro_Matsumoto.pngzz" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/articles/covers/000/000/046/thumb/Yukihiro_Matsumoto.pngzz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/controllers/categories_controller_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/categories_controller_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/fixtures/categories.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/categories.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/fixtures/contacts.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/contacts.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/fixtures/has_categories.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/has_categories.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/fixtures/users.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/users.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/mailers/info_mailer_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/mailers/info_mailer_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/mailers/previews/info_mailer_preview.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/mailers/previews/info_mailer_preview.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/models/category_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/models/category_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/models/contact_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/models/contact_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/models/has_category_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/models/has_category_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/models/user_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/models/user_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/system/categories_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/system/categories_test.rb" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.bundle/" />
+    <ignored path="$PROJECT_DIR$/components/" />
+    <ignored path="$PROJECT_DIR$/log/" />
+    <ignored path="$PROJECT_DIR$/public/system/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <ignored path="$PROJECT_DIR$/vendor/bundle/" />
+    <ignored path="$PROJECT_DIR$/vendor/cache/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/Blog_Rrails@Development__Blog_Rrails.rcov" NAME="Development: Blog-Rrails Coverage Results" MODIFIED="1552707925820" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Blog-Rrails" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/articles_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/users/sessions_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" selection-start-line="1" selection-end-line="23" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/users/registrations_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="54" selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/app/controllers/articles_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/users/registrations_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/users/sessions_controller.rb" />
+      </list>
+    </option>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="61" />
+    <option name="y" value="27" />
+    <option name="width" value="1305" />
+    <option name="height" value="728" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Blog-Rrails" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Blog-Rrails" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Blog-Rrails" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Blog-Rrails" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Blog-Rrails" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Blog-Rrails" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Blog-Rrails" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Blog-Rrails" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="users" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Blog-Rrails" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Blog-Rrails" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="RailsProjectView" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../RespaldoDebian-2018/Rails/API" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Rails.Development: Blog-Rrails">
+    <configuration name="Development: Blog-Rrails" type="RailsRunConfigurationType" factoryName="Rails">
+      <module name="Blog-Rrails" />
+      <predefined_log_file enabled="true" id="RUBY_RAILS_SERVER" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SCRIPT_ARGS" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="IP" VALUE="0.0.0.0" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="DUMMY_APP" VALUE="test/dummy" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="Default" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="development" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Production: Blog-Rrails" type="RailsRunConfigurationType" factoryName="Rails">
+      <module name="Blog-Rrails" />
+      <predefined_log_file enabled="true" id="RUBY_RAILS_SERVER" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SCRIPT_ARGS" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="IP" VALUE="0.0.0.0" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="DUMMY_APP" VALUE="test/dummy" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="Default" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="production" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="spec: Blog-Rrails" type="RakeRunConfigurationType" factoryName="Rake">
+      <module name="Blog-Rrails" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="spec" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE=":rspec " />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test: Blog-Rrails" type="RakeRunConfigurationType" factoryName="Rake">
+      <module name="Blog-Rrails" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="RAILS_ENV" value="test" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="test" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE=":test_unit " />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpringUtil" SPRING_PRE_LOADER_OPTION="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="231d4b6c-172c-4630-a0cb-3fce54e5a481" name="Default Changelist" comment="" />
+      <created>1552707000477</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1552707000477</updated>
+      <workItem from="1552707005600" duration="935000" />
+      <workItem from="1552708179223" duration="100000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1035000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="61" y="27" width="1305" height="728" extended-state="0" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2533757" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3897436" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3299566" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" weight="0.32962668" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/articles_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/users/registrations_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="54" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/users/sessions_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="23" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

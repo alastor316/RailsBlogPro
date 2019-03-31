@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
  
+  
   get "articles/search"
   
   devise_for :users, controllers: {
@@ -15,6 +16,8 @@ Rails.application.routes.draw do
   post "contacts/new"
   get 'welcome/contacto'
   resources :contacts, only: [:create, :new]
-  resources :articles
+  resources :articles do
+    resources :comments
+  end
 
 end

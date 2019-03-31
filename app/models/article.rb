@@ -1,13 +1,15 @@
 class Article < ApplicationRecord
     include PermissionsConcern
+    has_many :comments, dependent: :destroy
     has_many :has_categories, dependent: :destroy
-    has_many :categories, through: :has_categories, dependent: :nullify
+    has_many :categories, through: :has_categories, dependent: :destroy
     after_create :save_categoryMetodo
     belongs_to :user
     validates :title, uniqueness: true
     validates :title,:body, presence: true
     validates :title, length: {in: 5..13 }
     validates :body, length: {minimum: 450, too_short: "Minimo son %{count} caracteres" }
+    validate :valide_categories
     scope :ultimos, -> {order("created_at DESC")}
     scope :ult, -> {where(title: "Registro")} 
     scope :titulo, -> (title) { where("lower (title) LIKE ?", "%#{title}%") } 
@@ -26,12 +28,21 @@ class Article < ApplicationRecord
     def categoryMetodo=(value)
         @categories = value
         #raise value.to_yaml
-    end     
+    end
+    
+    def getCategories
+        @categories
+    end
     private
     def save_categoryMetodo
             @categories.each do |category_id|
              #  raise "category_id #{category_id} article_id #{self.id}"
                 HasCategory.create(category_id: category_id, article_id: self.id )
+        end
+    end
+    def valide_categories
+        if self.getCategories.blank? && self.id.nil?
+            errors.add(:categories, "Debe agregar una categoria.")
         end
     end
 end

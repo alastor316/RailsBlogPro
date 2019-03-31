@@ -6,14 +6,19 @@
  
  <div class="col-md-3 ">
     <div class="card">
-        <div class="card-body <%="#{category.name.delete(' ')}"%> ">
-            <h2 class="card-title"><%= category.name %></h2>
-            <p>
-                <%= "Contiene #{category.articles.count} articulo(s)" %>
-            </p>
-            <div class"card-text">
-                <%="Creado en #{category.created_at.strftime("%b, %d, %Y, %H:%M") }"%>
-            </div>
+        <div class="categories-container">
+            <%= link_to category do %>
+                <div class="card-body <%="#{category.name.delete(' ')}"%> ">
+                    <h2 class="card-title text-center"><%= category.name %></h2>
+                        <%= image_tag category.coverCat(:thumb),class:"card-img-top" %>
+                    <p>
+                        <%= "Contiene #{category.articles.count} articulo(s)" %>
+                    </p>
+                    <div class"card-text">
+                        <%="Creado en #{category.created_at.strftime("%b, %d, %Y, %H:%M") }"%>
+                    </div>
+                </div>
+            <%end%>
         </div>
     </div>
  </div>

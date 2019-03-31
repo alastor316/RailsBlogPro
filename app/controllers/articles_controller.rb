@@ -13,13 +13,14 @@ class ArticlesController < ApplicationController
   end
 
   def index
-    @articulos = Article.ultimos
+    @articulos = Article.paginate(:page => params[:page], :per_page => 4).ultimos
     if user_signed_in? && current_user.is_editor? && !params.has_key?(:normal)
       render :"admin_article"
     end
   end
 
   def show
+    @comment = Comment.new
     #raise params.to_yaml
   end
 
@@ -29,9 +30,6 @@ def new
   end
 
   def create
-    if params[:categories].nil?
-        redirect_to new_article_path, alert:"Necesitas agregar minimo una categoria."
-    else
       @article = current_user.articles.new(article_params)
       @article.categoryMetodo = params[:categories]
       #raise @article.to_yaml
@@ -45,7 +43,7 @@ def new
         end
       end
     end
-  end
+  
 
 
 
@@ -55,6 +53,7 @@ def new
   end
 
   def update
+  #  @article.categoryMetodo = @article.categories.ids
     respond_to do |format|
       if @article.update(article_params)
         format.html {redirect_to @article, notice: "Articulo #{@article.title}  mofificado."}
@@ -80,6 +79,10 @@ def new
   end
 
   def set_article
-    @article = Article.find(params[:id])
+    begin
+      @article = Article.find(params[:id])
+    rescue ActiveRecord::RecordNotFound
+      redirect_to root_path, alert:"No existe ese articulo"
+    end
   end
 end

@@ -13,7 +13,7 @@
             <tr class="tabla-tr text-center">
                 <td><%="#{cat.name} #{cat.created_at.strftime("%b, %d, %Y, %H:%M") }"%></td>
                 <td>
-                    <%=link_to "ver", edit_category_path(cat),class:"btn btn-info"%>
+                    <%=link_to "ver", cat,class:"btn btn-info"%>
                     <%=link_to "Editar", edit_category_path(cat),class:"btn btn-warning"%>
                     <%=link_to "Eliminar", cat, method: :delete, data:{confirm:"Desea eliminar?"},class:"btn btn-danger"%>
                 </td>    

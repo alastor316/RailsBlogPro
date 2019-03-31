@@ -16,6 +16,7 @@ class CategoriesController < ApplicationController
   # GET /categories/1
   # GET /categories/1.json
   def show
+    @articles = @category.articles.paginate(:page => params[:page], :per_page => 2) 
   end
 
   # GET /categories/new
@@ -69,11 +70,15 @@ class CategoriesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_category
-      @category = Category.find(params[:id])
+      begin
+        @category = Category.find(params[:id])
+      rescue ActiveRecord::RecordNotFound
+        redirect_to root_path, alert:"No existe esa categoria"
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def category_params
-      params.require(:category).permit(:name, :color)
+      params.require(:category).permit(:name, :color, :coverCat)
     end
 end

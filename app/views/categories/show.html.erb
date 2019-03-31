@@ -10,30 +10,20 @@
 </style>
 
 <div class="categories-show">
-  <h1 class="text-center"> <%= @category.name %>  </h1>
-  <h5 class="text-center">
-      <% if !@category.user.nil? %>
-        Creado por <strong><%= @category.user.email%></strong>
-      <%end%>
-  </h5>
+  
+      <h1 class="text-center"> <%= @category.name %>  </h1>
+      <h5 class="text-center ">
+          <% if !@category.user.nil? %>
+            Creado por <strong><%= @category.user.email%></strong>
+          <%end%>
+      </h5>
 </div>
-<div class="row">
-<% @category.articles.each do |article| %>    
-    <div class="col-md-4">
-      
-        <div class="jumbotron">
 
-          <h3>    
-                <%=article.title%>
-          </h3>
-          <p><%=truncate(article.body, length: 200) %></p>
-          <%= link_to  "Ver mas", article, class:"btn btn-info" %>
-          <% if user_signed_in? && current_user.is_editor? %>
-            <%= link_to 'Edit', edit_category_path(@category), class:"btn btn-warning", style:"width: 70px" %> 
-          <%end%>  
-          <%= link_to 'Back', categories_path, class:"btn btn-success", style:"width: 70px" %>
-        </div>
-      </div>
-  <%end%>
-  </div>
+<div class="row " >
+  <%= render @articles %>   
+</div>
+
+<div class="flickr_pagination" style="margin-top: 20px; margin-bottom: 20px;">
+    <%= will_paginate @articles %>  
+</div>
 
